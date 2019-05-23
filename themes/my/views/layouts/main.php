@@ -7,6 +7,7 @@
     $baseUrl  = Yii::app()->theme->baseUrl;
     $getCs    = Yii::app()->getClientScript();
 
+    $getCs->registerCssFile($baseUrl.'/css/dataTables.bootstrap4.min.css');
     /* Bootstrap 3.3.7 */
     $getCs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
     /* CSS */
@@ -23,6 +24,8 @@
     </div>
     <?php echo $content; ?>
     
+    <?php $getCs->registerScriptFile($baseUrl.'/js/dataTables.bootstrap4.min.js'); ?>
+    <?php $getCs->registerScriptFile($baseUrl.'/js/jquery.dataTables.min.js'); ?>
     <?php $getCs->registerScriptFile($baseUrl.'/js/bootstrap.min.js'); ?>
 </body>
 </html>

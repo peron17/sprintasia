@@ -38,7 +38,7 @@ return array(
 			'packages'=>array(
             	'jquery'=>array(
                 	'baseUrl'=> '/sprintasia/themes/my/js/',
-                    'js'=>array('jquery-3.3.1.slim.min.js')
+                    'js'=>array('jquery-3.3.1.js')
                 ),
             ) 
 		),
