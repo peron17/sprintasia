@@ -1,0 +1,1 @@
+<?php  Yii::import('gii.generators.crud.CrudCode') ?>

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO
+END
+phppdo.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/phppdo.php
+END
+CPdoDbConnection.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/CPdoDbConnection.php
+END
+pdostatementabstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/pdostatementabstract.php
+END
+COPYING.LESSER
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/COPYING.LESSER
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/ChangeLog
+END
+pdoexception.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/pdoexception.php
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/COPYING
+END
+README.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/README.TXT
+END
+pdoabstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/kvision/!svn/ver/1/protected/extensions/PHPPDO/pdoabstract.php
+END
