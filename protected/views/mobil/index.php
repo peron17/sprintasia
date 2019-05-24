@@ -5,7 +5,7 @@
 			<form id="form-search">
 				<div class="form-row">
 					<div class="form-group col-md-5">
-						<select class="form-control">
+						<select class="form-control" id="criteria">
 							<option>- Search Criteria -</option>
 							<option value="kerangka">Nomor Kerangka</option>
 							<option value="polisi">Nomor Polisi</option>
@@ -16,7 +16,7 @@
 					</div>
 					<div class="col-md-7">
 						<div class="input-group mb3">
-							<input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+							<input type="text" class="form-control" id="key" placeholder="Search" aria-describedby="basic-addon2">
 							<div class="input-group-append">
 								<button class="btn btn-secondary" id="btn-search" type="button">Search!</button>
 							</div>
@@ -26,6 +26,36 @@
 			</form>
 		</div>
 	</div>
+
+	<?php
+        if(Yii::app()->user->hasFlash('success'))
+            echo '<div class="alert alert-success alert-dismissable">';
+        elseif(Yii::app()->user->hasFlash('error'))
+            echo '<div class="alert alert-danger alert-dismissable">';
+        elseif(Yii::app()->user->hasFlash('warning'))
+            echo '<div class="alert alert-warning alert-dismissable">';
+        elseif(Yii::app()->user->hasFlash('info'))
+            echo '<div class="alert alert-info alert-dismissable">';
+
+        $flashMessages = Yii::app()->user->getFlashes();
+        if ($flashMessages) {
+            foreach($flashMessages as $key => $message) {
+              if($key == 'success')
+                echo "<i class='fa fa-check'></i>";
+              elseif($key == 'error')
+                echo "<i class='fa fa-ban'></i>";
+              elseif($key == 'warning')
+                echo "<i class='fa fa-exclamation'></i>";
+              elseif($key == 'info')
+                echo "<i class='fa fa-comment'></i>";
+
+                echo   '<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+                        <b>'.$key.'!&nbsp;&nbsp;</b>
+                        '.$message;
+            }
+            echo '</div>';
+        }
+    ?>
 
 	<table id="datatable" class="table table-striped table-bordered">
 		<thead>
@@ -48,8 +78,8 @@
 				<td><?= $d->types->name ?></td>
 				<td><?= $d->year ?></td>
 				<td>
-					<button class="btn btn-sm btn-warning">Edit</button>
-					<button class="btn btn-sm btn-danger">Delete</button>
+					<a href="<?= Yii::app()->createUrl('mobil/update', ['id'=>$d->chassis_number]) ?>" class="btn btn-sm btn-warning">Edit</a>
+					<a href="<?= Yii::app()->createUrl('mobil/delete', ['id'=>$d->chassis_number]) ?>" class="btn btn-sm btn-danger">Delete</a>
 				</td>
 			</tr>
 			<?php $total++; ?>
@@ -62,16 +92,25 @@
 			Total Mobil : <?= $total ?>
 		</div>
 		<div class="col-md-2" style="text-align: right;">
-			<a href="" class="btn btn-sm btn-success btn-add">Tambah Mobil</a>
+			<a href="<?= Yii::app()->createUrl('mobil/create') ?>" class="btn btn-sm btn-success btn-add">Tambah Mobil</a>
 		</div>
 	</div>
 </div>
+
 <script>
 $(document).ready(function(){
-	$('#datatable').DataTable( {
+	let table = $('#datatable').DataTable({
 		'searching'		: false, 
 		'info' 			: false,
 		'paging' 		: false
 	} );
+
+	let form_search = $('#form-search');
+
+	$('#btn-search').click(function(e){
+		e.preventDefault();
+
+		
+	});
 });
 </script>

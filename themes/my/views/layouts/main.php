@@ -25,6 +25,7 @@
     </div>
     <?php echo $content; ?>
     
+    <?php $getCs->registerScriptFile($baseUrl.'/js/jquery-3.3.1.js'); ?>
     <?php $getCs->registerScriptFile($baseUrl.'/js/dataTables.bootstrap4.min.js'); ?>
     <?php $getCs->registerScriptFile($baseUrl.'/js/jquery.dataTables.min.js'); ?>
     <?php $getCs->registerScriptFile($baseUrl.'/js/bootstrap.min.js'); ?>

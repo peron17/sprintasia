@@ -11,6 +11,7 @@
  */
 class MChassis extends CActiveRecord
 {
+	public $brand;
 	/**
 	 * @return string the associated database table name
 	 */
