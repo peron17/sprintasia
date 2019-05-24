@@ -1,5 +1,5 @@
 <?php
 return array (
-  'template' => 'ajax',
+  'template' => 'default',
   'baseControllerClass' => 'Controller',
 );

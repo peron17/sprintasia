@@ -29,10 +29,12 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		// if(Yii::app()->user->isGuest)
-		// 	$this->redirect(array('site/login'));
+		if(Yii::app()->user->isGuest)
+			$this->redirect(array('site/login'));
+		else
+			$this->redirect(array('mobil/index'));
 
-		$this->render('index');
+		// $this->render('index');
 	}
 
 	/**
@@ -115,6 +117,28 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+	public function actionSignup()
+	{
+		$this->layout = '//layouts/clean';
+
+		$model = new SUser;
+
+		$this->performAjaxValidation($model, 'form-signup');
+
+		if(isset($_POST['SUser']))
+		{
+			$model->attributes = $_POST['SUser'];
+			$model->password = password_hash($model->password, PASSWORD_BCRYPT);
+			$model->active = 'Y';
+			$model->created_at = date('Y-m-d H:i:s');
+
+			if($model->save())
+				$this->redirect(['site/login']);
+		}
+
+		$this->render('signup', ['model' => $model]);
+	}
+
 	public function actionResetpassword()
 	{
 		$this->layout = '//layouts/clean';
@@ -182,10 +206,6 @@ class SiteController extends Controller
 	 */
 	public function actionLogout()
 	{
-		$model = UUser::model()->findByPk(Yii::app()->user->getId());
-		$model->last_login = new CDbExpression("NOW()");
-		$model->update();
-
 		Yii::app()->user->logout();
 
 		$this->redirect(Yii::app()->homeUrl);

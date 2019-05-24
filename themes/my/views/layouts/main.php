@@ -4,6 +4,7 @@
     <title><?= Yii::app()->name ?> | Log in</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php  
+    $user = SUser::model()->findByPk(Yii::app()->user->getId());
     $baseUrl  = Yii::app()->theme->baseUrl;
     $getCs    = Yii::app()->getClientScript();
 
@@ -18,7 +19,7 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 class="my-0 mr-md-auto font-weight-normal"><?= Yii::app()->name ?></h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            Hello, Sutiyoso
+            Hello, <?= $user->full_name ?>
         </nav>
         <a class="btn btn-sm btn-danger" href="<?= Yii::app()->createUrl('site/logout') ?>">Logout</a>
     </div>

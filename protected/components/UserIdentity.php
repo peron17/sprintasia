@@ -19,8 +19,8 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$c = new CDbCriteria;
-		$c->addCondition("username = '".$this->username."' AND status='ACTIVE'");
-		$user = UUser::model()->find($c);
+		$c->addCondition("username = '".$this->username."' AND active='Y'");
+		$user = SUser::model()->find($c);
 
 		if($user === null) {
 			$this->errorCode=self::ERROR_USERNAME_INVALID;

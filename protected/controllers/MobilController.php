@@ -41,7 +41,12 @@ class MobilController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
+		$model = MChassis::model()->findAll();
+		// $data = $model->getDataChassis();
+
+		$this->render('index', [
+			'model' => $model
+		]);
 	}
 
 	// Uncomment the following methods and override them if needed

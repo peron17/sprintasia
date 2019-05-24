@@ -38,23 +38,17 @@
 				<th>Aksi</th>
 			</tr>
 		</thead>
+		<tbody>
+			
+		</tbody>
 	</table>
 </div>
 <script>
 $(document).ready(function(){
 	$('#datatable').DataTable( {
-		'ajax'	: {
-			'url' : '<?= Yii::app()->createUrl('mobil/getdata') ?>',
-			'dataSrc' : 'data'
-		},
-		'columns' 	: [
-			{ 'data': 'nomor_kerangka'},
-			{ 'data': 'nomor_polisi'},
-			{ 'data': 'merek'},
-			{ 'data': 'tipe'},
-			{ 'data': 'tahun'},
-			{ 'data': 'aksi'}
-		]
+		'searching'		: false, 
+		'info' 			: false,
+		'paging' 		: false
 	} );
 });
 </script>
