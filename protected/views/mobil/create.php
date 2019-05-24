@@ -1,6 +1,9 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-12" style="text-align: right;">
+		<div class="col-md-6">
+			<h5>Mobil</h5>
+		</div>
+		<div class="col-md-6" style="text-align: right;">
 			<a href="<?= Yii::app()->createUrl('mobil/index') ?>" class="btn btn-sm btn-success">Home</a>
 		</div>
 	</div><br>
@@ -21,7 +24,7 @@
 				</div>
 				<div class="form-group col-md-6">
 					<?= $form->labelEx($model,'police_number'); ?>
-					<?= $form->textField($model,'police_number',array('size'=>8,'maxlength'=>8, 'class'=>'form-control')); ?>
+					<?= $form->textField($model,'police_number',array('size'=>12,'maxlength'=>12, 'class'=>'form-control')); ?>
 					<?= $form->error($model,'police_number'); ?>
 				</div>
 			</div>
@@ -38,7 +41,7 @@
 				</div>
 				<div class="form-group col-md-4">
 					<?= $form->labelEx($model,'year'); ?>
-					<?= $form->textField($model,'year',array('size'=>8,'maxlength'=>8, 'class'=>'form-control')); ?>
+					<?= $form->textField($model,'year',array('size'=>4,'maxlength'=>4, 'class'=>'form-control')); ?>
 					<?= $form->error($model,'year'); ?>
 				</div>
 			</div>

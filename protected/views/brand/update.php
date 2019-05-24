@@ -1,17 +1,12 @@
-<?php $this->page_title = 'Edit MBrand #'.$model->code;
-
-$this->breadcrumbs=array(
-	'Mbrands'=>array('index'),
-	$model->name=>array('view','id'=>$model->code),
-	'Update',
-);
-
-$this->menu=array(
-	array('label'=>'<i class="fa fa-search"></i>&nbsp;VIEW', 'url'=>array('view','id'=>$model->code), 'linkOptions'=>array('class'=>'btn btn-info','style'=>'margin-right:10px;')),
-	array('label'=>'<i class="fa fa-plus"></i>&nbsp;CREATE', 'url'=>array('create'), 'linkOptions'=>array('class'=>'btn btn-info','style'=>'margin-right:10px;')),
-	array('label'=>'<i class="fa fa-eraser"></i>&nbsp;DELETE', 'url'=>array('delete','id'=>$model->code), 'linkOptions'=>array('class'=>'btn btn-danger','style'=>'margin-right:10px;')),
-	array('label'=>'<i class="fa fa-th"></i>&nbsp;MANAGE', 'url'=>array('index'), 'linkOptions'=>array('class'=>'btn btn-info')),
-);
-
+<div class="row">
+	<div class="col-md-6">
+		<h5>Merk</h5>
+	</div>
+	<div class="col-md-6" style="text-align: right;">
+		<a href="<?= Yii::app()->createUrl('brand/create') ?>" class="btn btn-sm btn-success">Create</a>
+		<a href="<?= Yii::app()->createUrl('brand/index') ?>" class="btn btn-sm btn-success">Manage</a>
+	</div>
+</div>
+<?php
 $this->renderPartial('_form', array('model'=>$model));
 ?>

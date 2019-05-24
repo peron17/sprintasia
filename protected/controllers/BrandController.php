@@ -81,8 +81,10 @@ class BrandController extends Controller
 		if(isset($_POST['MBrand']))
 		{
 			$model->attributes=$_POST['MBrand'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+			if($model->save()){
+				Yii::app()->user->setFlash('success', "Data berhasil ditambahkan"); 
+				$this->redirect(array('index'));
+			}
 		}
 
 		$this->render('create',array(
@@ -122,8 +124,10 @@ class BrandController extends Controller
 		if(isset($_POST['MBrand']))
 		{
 			$model->attributes=$_POST['MBrand'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+			if($model->save()){
+				Yii::app()->user->setFlash('success', "Data berhasil diperbarui"); 
+				$this->redirect(array('index'));
+			}
 		}
 
 		$this->render('update',array(

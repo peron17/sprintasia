@@ -31,7 +31,7 @@ class MChassis extends CActiveRecord
 			array('chassis_number, police_number, type, year', 'required'),
 			array('type, year', 'numerical', 'integerOnly'=>true),
 			array('chassis_number', 'length', 'max'=>40),
-			array('police_number', 'length', 'max'=>8),
+			array('police_number', 'length', 'max'=>12),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('chassis_number, police_number, type, year', 'safe', 'on'=>'search'),

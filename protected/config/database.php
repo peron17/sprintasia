@@ -7,8 +7,8 @@ return array(
 	
 	'connectionString' => 'mysql:host=localhost;dbname=dbsprintasia',
 	'emulatePrepare' => true,
-	'username' => 'peron',
-	'password' => '',
+	'username' => 'root',
+	'password' => 'root',
 	'charset' => 'utf8',
 	
 );

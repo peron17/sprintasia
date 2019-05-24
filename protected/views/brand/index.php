@@ -1,13 +1,40 @@
-<?php 
-$this->page_title = 'MBrand';
+<div class="row">
+	<div class="col-md-6">
+		<h5>Merk</h5>
+	</div>
+	<div class="col-md-6" style="text-align: right;">
+		<a href="<?= Yii::app()->createUrl('brand/create') ?>" class="btn btn-sm btn-success">Tambah Merk</a>
+	</div>
+</div>
 
-$this->breadcrumbs=array(
-	'Mbrands',
-);
+<?php
+    if(Yii::app()->user->hasFlash('success'))
+        echo '<div class="alert alert-success alert-dismissable">';
+    elseif(Yii::app()->user->hasFlash('error'))
+        echo '<div class="alert alert-danger alert-dismissable">';
+    elseif(Yii::app()->user->hasFlash('warning'))
+        echo '<div class="alert alert-warning alert-dismissable">';
+    elseif(Yii::app()->user->hasFlash('info'))
+        echo '<div class="alert alert-info alert-dismissable">';
 
-$this->menu=array(
-	array('label'=>'<i class="fa fa-plus-square"></i>&nbsp;CREATE', 'url'=>array('create'), 'linkOptions'=>array('class'=>'btn btn-info')),
-);
+    $flashMessages = Yii::app()->user->getFlashes();
+    if ($flashMessages) {
+        foreach($flashMessages as $key => $message) {
+          if($key == 'success')
+            echo "<i class='fa fa-check'></i>";
+          elseif($key == 'error')
+            echo "<i class='fa fa-ban'></i>";
+          elseif($key == 'warning')
+            echo "<i class='fa fa-exclamation'></i>";
+          elseif($key == 'info')
+            echo "<i class='fa fa-comment'></i>";
+
+            echo   '<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+                    <b>'.$key.'!&nbsp;&nbsp;</b>
+                    '.$message;
+        }
+        echo '</div>';
+    }
 ?>
 
 <div class="box box-solid">
@@ -17,29 +44,24 @@ $this->menu=array(
 		'id' 			=> 'mbrand-grid',
 		'dataProvider'	=> $model->search(),
 		'filter'		=> $model,
-		'itemsCssClass'	=> 'table table-bordered table-hover',
+		'itemsCssClass'	=> 'table table-bordered table-striped table-condensed',
 		'columns'		=> array(
-					'code',
+			'code',
 			'name',
 			array(
 				'class'=>'CButtonColumn',
-				'htmlOptions'=>array('width'=>'70'),
-				'template'=>'{view}&nbsp;&nbsp;{edit}&nbsp;&nbsp;{delete}',
+				'htmlOptions'=>array('width'=>'160'),
+				'template'=>'{edit}&nbsp;{delete}',
 				'header'=>'Actions',
 				'buttons'=>array(
-					'view'=>array(
-						'label'=>'<i class="fa fa-search"></i>',
-						'options' => array('title'=>'View'),
-						'imageUrl'=>false,
-					),
 					'edit'=>array(
-						'label'=>'<i class="fa fa-edit"></i>',
+						'label'=>'<button class="btn btn-sm btn-warning">Edit</button>',
 						'options' => array('title'=>'Edit'),
 						'imageUrl'=>false,
-						'url'=>'Yii::app()->createUrl("mbrand/update",array("id"=>$data->code))'
+						'url'=>'Yii::app()->createUrl("brand/update",array("id"=>$data->code))'
 					),
 					'delete'=>array(
-						'label'=>'<i class="fa fa-eraser"></i>',
+						'label'=>'<button class="btn btn-sm btn-danger">Delete</button>',
 						'options' => array('title'=>'Delete'),
 						'imageUrl'=>false,
 					),

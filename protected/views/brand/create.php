@@ -1,14 +1,11 @@
+<div class="row">
+	<div class="col-md-6">
+		<h5>Merk</h5>
+	</div>
+	<div class="col-md-6" style="text-align: right;">
+		<a href="<?= Yii::app()->createUrl('brand/index') ?>" class="btn btn-sm btn-success">Manage</a>
+	</div>
+</div>
 <?php 
-$this->page_title = 'Create MBrand';
-
-$this->breadcrumbs=array(
-	'Mbrands'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'<i class="fa fa-th"></i>&nbsp;MANAGE', 'url'=>array('index'), 'linkOptions'=>array('class'=>'btn btn-info')),
-);
-
 $this->renderPartial('_form', array('model'=>$model));
 ?>
