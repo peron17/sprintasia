@@ -33,7 +33,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="<?= Yii::app()->createUrl('mobil/index') ?>">Mobil</a>
+                    <a class="nav-item nav-link" href="<?= Yii::app()->createUrl('mobil/list') ?>">Mobil</a>
                     <a class="nav-item nav-link" href="<?= Yii::app()->createUrl('brand/index') ?>">Merk</a>
                     <a class="nav-item nav-link" href="<?= Yii::app()->createUrl('brandtype/index') ?>">Tipe</a>
                 </div>

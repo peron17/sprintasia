@@ -58,7 +58,7 @@ class MobilController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('list'));
 	}
 
 	public function actionGettype()
@@ -75,7 +75,7 @@ class MobilController extends Controller
 		}
 	}
 
-	public function actionIndex()
+	public function actionList()
 	{
 		$model = MChassis::model()->findAll();
 		// $data = $model->getDataChassis();
@@ -85,32 +85,13 @@ class MobilController extends Controller
 		]);
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	/*------------------API------------------ */
+	public function actionIndex($brand='', $type='')
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		echo $brand;
+		echo $type;
 	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
+	/*------------------/ API------------------ */
 
 	public function loadModel($id)
 	{

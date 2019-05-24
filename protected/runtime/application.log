@@ -455,3 +455,378 @@ HTTP_REFERER=http://localhost/sprintasia/brand/index
 2019/05/24 19:19:41 [warning] [application] Failed to set unsafe attribute "brand" of "MChassis".
 in D:\Wamp\www\sprintasia\protected\controllers\MobilController.php (13)
 in D:\Wamp\www\sprintasia\index.php (13)
+2019/05/24 19:28:47 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC), expecting '(' in D:\Wamp\www\sprintasia\protected\controllers\MobilController.php:92
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('list/')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('mobil/list')
+#2 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#3 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/sprintasia/mobil/list
+---
+2019/05/24 19:30:35 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('mobil/brand')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/mobil/brand
+---
+2019/05/24 19:38:52 [error] [exception.CException] CException: The URL pattern "api/mobil/index/brand/<id:\w+>/type/<id:\w+>" for route "api/mobil/" is not a valid regular expression. in D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php:702
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(270): CUrlRule->__construct('api/mobil/', 'api/mobil/index...')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(226): CUrlManager->createUrlRule('api/mobil/', 'api/mobil/index...')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CModule.php(394): CUrlManager->init()
+#4 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(530): CModule->getComponent('urlManager')
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#6 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/sprintasia/api/mobile
+---
+2019/05/24 19:38:56 [error] [exception.CException] CException: The URL pattern "api/mobil/index/brand/<id:\w+>/type/<id:\w+>" for route "api/mobil/" is not a valid regular expression. in D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php:702
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(270): CUrlRule->__construct('api/mobil/', 'api/mobil/index...')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(226): CUrlManager->createUrlRule('api/mobil/', 'api/mobil/index...')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CModule.php(394): CUrlManager->init()
+#4 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(530): CModule->getComponent('urlManager')
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#6 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/sprintasia/api/mobil
+---
+2019/05/24 19:46:14 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:46:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:47:04 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:51:57 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:52:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:52:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 19:52:56 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "a". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('a')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('a')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/a/b')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/a/b
+---
+2019/05/24 19:53:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "a". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('a')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('a')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/a/b')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/a/b
+---
+2019/05/24 20:04:45 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "apis/mobil". in D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apis/mobil')
+#1 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sprintasia/apis/mobil
+---
+2019/05/24 20:04:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "apis/mobil". in D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apis/mobil')
+#1 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sprintasia/apis/mobil
+---
+2019/05/24 20:05:26 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 20:05:27 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "brand". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('brand')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('brand')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/brand...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/brand/a/type/b
+---
+2019/05/24 20:28:49 [error] [exception.CException] CException: Property "CDbCriteria.where" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(18): CComponent->__set('where', 'lower(b.code)='...')
+#1 [internal function]: ApiController->actionMobil('toyota', 'avanza')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ApiController), Array)
+#3 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ApiController), Object(ReflectionMethod), Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('mobil')
+#8 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil')
+#9 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/sprintasia/api/mobil/toyota/avanza
+---
+2019/05/24 20:29:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'avanza' in 'where clause'. The SQL statement executed was: SELECT t.chassis_number, t.police_number, t.year, bt.name as type, b.name as brand FROM `m_chassis` `t` join m_brand_type bt on t.type = bt.id join m_brand b on bt.brand = b.code WHERE lower(b.code)='toyota' and lower(bt.name)=avanza.
+in D:\Wamp\www\sprintasia\protected\controllers\ApiController.php (24)
+in D:\Wamp\www\sprintasia\index.php (13)
+2019/05/24 20:29:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'avanza' in 'where clause'. The SQL statement executed was: SELECT t.chassis_number, t.police_number, t.year, bt.name as type, b.name as brand FROM `m_chassis` `t` join m_brand_type bt on t.type = bt.id join m_brand b on bt.brand = b.code WHERE lower(b.code)='toyota' and lower(bt.name)=avanza in D:\Wamp\www\sprintasia\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(24): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: ApiController->actionMobil('toyota', 'avanza')
+#5 D:\Wamp\www\sprintasia\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ApiController), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ApiController), Object(ReflectionMethod), Array)
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('mobil')
+#11 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil')
+#12 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/sprintasia/api/mobil/toyota/avanza
+---
+2019/05/24 20:40:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.code' in 'on clause'. The SQL statement executed was: SELECT t.id, b.name as merk, t.name as tipe FROM `m_brand_type` `t` join m_brand b on t.code = b.brand.
+in D:\Wamp\www\sprintasia\protected\controllers\ApiController.php (58)
+in D:\Wamp\www\sprintasia\index.php (13)
+2019/05/24 20:40:37 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.code' in 'on clause'. The SQL statement executed was: SELECT t.id, b.name as merk, t.name as tipe FROM `m_brand_type` `t` join m_brand b on t.code = b.brand in D:\Wamp\www\sprintasia\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(58): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): ApiController->actionTipe()
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('tipe')
+#9 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#10 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:42:06 [error] [exception.CException] CException: Property "MBrandType.merk" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('merk')
+#1 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(64): CActiveRecord->__get('merk')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): ApiController->actionTipe()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('tipe')
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#8 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:42:52 [error] [exception.CException] CException: Property "MBrandType.merk" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('merk')
+#1 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(64): CActiveRecord->__get('merk')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): ApiController->actionTipe()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('tipe')
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#8 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:43:23 [error] [exception.CException] CException: Property "MBrandType.tipe" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tipe')
+#1 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(65): CActiveRecord->__get('tipe')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): ApiController->actionTipe()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('tipe')
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#8 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:46:36 [error] [exception.CException] CException: Property "MBrandType.tipe" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tipe')
+#1 D:\Wamp\www\sprintasia\protected\controllers\ApiController.php(65): CActiveRecord->__get('tipe')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): ApiController->actionTipe()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('tipe')
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#8 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:48:32 [error] [exception.ParseError] ParseError: syntax error, unexpected ''merk'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in D:\Wamp\www\sprintasia\protected\controllers\ApiController.php:65
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('tipe/')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/tipe')
+#2 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#3 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/sprintasia/api/tipe
+---
+2019/05/24 20:56:15 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil
+---
+2019/05/24 20:56:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/index')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/index
+---
+2019/05/24 20:57:03 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil
+---
+2019/05/24 21:01:34 [error] [exception.CException] CException: Property "MChassis.tipe" is not defined. in D:\Wamp\www\sprintasia\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('tipe', '1')
+#1 D:\Wamp\www\sprintasia\protected\modules\api\controllers\MobilController.php(48): CActiveRecord->__set('tipe', '1')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\actions\CInlineAction.php(49): MobilController->actionCreate()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#7 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/creat...')
+#8 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/sprintasia/api/mobil/create
+---
+2019/05/24 21:02:23 [error] [php] Undefined index: nomor_kerangka (D:\Wamp\www\sprintasia\protected\modules\api\controllers\MobilController.php:40)
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): MobilController->runAction()
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): MobilController->runActionWithFilters()
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): MobilController->run()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 D:\Wamp\www\sprintasia\index.php(13): CWebApplication->run()
+REQUEST_URI=/sprintasia/api/mobil/create
+in D:\Wamp\www\sprintasia\protected\modules\api\controllers\MobilController.php (40)
+in D:\Wamp\www\sprintasia\index.php (13)
+2019/05/24 21:06:45 [error] [php] Undefined index: id (D:\Wamp\www\sprintasia\protected\modules\api\controllers\MobilController.php:64)
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(286): MobilController->runAction()
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(265): MobilController->runActionWithFilters()
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): MobilController->run()
+#3 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 D:\Wamp\www\sprintasia\index.php(13): CWebApplication->run()
+REQUEST_URI=/sprintasia/api/mobil/update
+in D:\Wamp\www\sprintasia\protected\modules\api\controllers\MobilController.php (64)
+in D:\Wamp\www\sprintasia\index.php (13)
+2019/05/24 21:10:25 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "<action>". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('<action>')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('<action>')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/<acti...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/delete/123456123100
+---
+2019/05/24 21:10:54 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "<action>". in D:\Wamp\www\sprintasia\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Wamp\www\sprintasia\yii\framework\web\CController.php(270): CController->missingAction('<action>')
+#1 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(282): CController->run('<action>')
+#2 D:\Wamp\www\sprintasia\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api/mobil/<acti...')
+#3 D:\Wamp\www\sprintasia\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\Wamp\www\sprintasia\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sprintasia/api/mobil/delete/123456123100
+---

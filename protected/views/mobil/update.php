@@ -5,7 +5,7 @@
 		</div>
 		<div class="col-md-6" style="text-align: right;">
 			<a href="<?= Yii::app()->createUrl('mobil/create') ?>" class="btn btn-sm btn-success">Create</a>
-			<a href="<?= Yii::app()->createUrl('mobil/index') ?>" class="btn btn-sm btn-success">Home</a>
+			<a href="<?= Yii::app()->createUrl('mobil/list') ?>" class="btn btn-sm btn-success">Home</a>
 		</div>
 	</div><br>
 	<div class="card">

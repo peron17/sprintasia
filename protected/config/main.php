@@ -16,7 +16,7 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-		'application.components.*',
+		'application.components.*'
 	),
 
 	'modules'=>array(
@@ -29,6 +29,7 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 		),
+		'api'
 	),
 
 	// application components
@@ -63,14 +64,18 @@ return array(
 			// 'appendParams'=>true,
 			// 'class' => 'UrlManager',
 			'rules'=>array(
+				'api/mobil/index/<brand>' => 'api/mobil',
+				'api/mobil/index/<brand>/<type>' => 'api/mobil',
+				// 'api/mobil/<action:\w+>' => 'api/mobil/<action>',
+				'api/mobil/delete/<id>' => 'api/mobil/delete',
+				// 'api/mobil/<brand:\d+>/<type>' 	 => 'api/mobil',
 				'<controller:\w+>/view/id/<id:\w+>'      => '<controller>/view',
 				'<controller:\w+>/update/id/<id:\w+>'    => '<controller>/update',
 				'<controller:\w+>/delete/id/<id:\w+>'    => '<controller>/delete',
-				'<controller:\w+>/edit/id/<id:\w+>'    => '<controller>/edit',
+				'<controller:\w+>/edit/id/<id:\w+>'      => '<controller>/edit',
 				
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'          => '<controller>/<action>',
-
 				// '<controller:[\w\-]+>/<action:[\w\-]+>' => '<controller>/<action>',
 			),
 		),
